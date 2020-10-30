@@ -1,15 +1,12 @@
 # pekocko
-pour acceder à l'application 
+accéder à l'application
 
-1) le front-end
+lien frontend
 
-Lien du dépôt
+https://github.com/OpenClassrooms-Student-Center/dwj-projet6
 
-Le lien du dépôt GitHub pour la partie frontend est le suivant : https://github.com/OpenClassrooms-Student-Center/dwj-projet6
 
-Procédure
-
-angular doit être installé préalablement
+installer angular
 
 1. Cloner le projet.
 2. Exécuter npm install.
@@ -17,9 +14,9 @@ angular doit être installé préalablement
 4. Exécution du front-end  sur ​http://localhost:4200​.
 
 
-2) Le back-end
+backend
 
 1. Cloner le repository
 
-pour mongodb, entrer vos identifiants et mot de passe mongodb à la place des variables NAME et PASS (voir le fichier exemple.env)
-2. Executer node server ou nodemon server ou npx nodemon dans votre terminal/invite de commande
+entrer vos identifiants sur mongoDB NAME et PASS 
+2. exe nodemon server dans votre terminal
