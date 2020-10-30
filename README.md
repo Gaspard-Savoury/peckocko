@@ -8,15 +8,16 @@ https://github.com/OpenClassrooms-Student-Center/dwj-projet6
 
 installer angular
 
-1. Cloner le projet.
-2. Exécuter npm install.
-3. Exécuter npm start/ng serve
-4. Exécution du front-end  sur ​http://localhost:4200​.
+1 Cloner le projet.
+2 npm install.
+3 ng serve
+4 Exécuter front-end  sur ​http://localhost:4200​
 
 
 backend
 
-1. Cloner le repository
+1 Cloner le repository
 
 entrer vos identifiants sur mongoDB NAME et PASS 
-2. exe nodemon server dans votre terminal
+
+2 exe nodemon server dans votre terminal
