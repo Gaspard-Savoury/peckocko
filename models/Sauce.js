@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// schéma de création d'une sauce
+// schéma (thing) pour la création d'une sauce
 
 const sauceSchema = mongoose.Schema({
 

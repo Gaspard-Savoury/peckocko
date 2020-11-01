@@ -26,7 +26,7 @@ const apiLimiter = rateLimit ( {
 
 //console.log(html);
 
-//identifiant et mot de passe mongodb local (à mettre sur atlas)
+//connexion de l'api à la base de données en ligne mongoDB Atlas => mot de passe et nom de l'utilisateur
 mongoose.connect(`mongodb://localhost/my_database`
 ,
   { useNewUrlParser: true,
@@ -34,7 +34,7 @@ mongoose.connect(`mongodb://localhost/my_database`
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));  
 
-// CORS permettre aux différentes adresses de communiquer entre elles. 
+// CORS autorise les applications à communiquer entre elles 
 app.use((req, res, next) => { 
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');

@@ -16,7 +16,7 @@ exports.CreateSauce = (req, res, next) => {
       usersDisliked: []
     });
     sauce.save()
-    .then(() => res.status(201).json({ message: 'Sauce enregistrée !'}))
+    .then(() => res.status(201).json({ message: 'Nouvelle sauce créée !'}))
     .catch(error => res.status(400).json({ error }));
   };
 
@@ -39,7 +39,7 @@ exports.modifySauce = (req, res, next) => {
     const sauceObject = req.file ?
       { ...JSON.parse(req.body.sauce),imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`} : { ...req.body };
     Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id })
-      .then(() => res.status(200).json({ message: 'Sauce modifiée !'}))
+      .then(() => res.status(200).json({ message: 'La sauce a été modifiée !'}))
       .catch(error => res.status(400).json({ error }));
   };
 
@@ -51,7 +51,7 @@ exports.modifySauce = (req, res, next) => {
         const filename = sauce.imageUrl.split('/images/')[1];
         fs.unlink(`images/${filename}`, () => {
           Sauce.deleteOne({ _id: req.params.id })
-            .then(() => res.status(200).json({ message: 'La sauce a bien été supprimée !'}))
+            .then(() => res.status(200).json({ message: 'La sauce a été supprimée !'}))
             .catch(error => res.status(400).json({ error }));
         });
       })
@@ -95,7 +95,7 @@ exports.likeSauce = (req, res, next) => {
         $addToSet: { usersLiked: req.body.userId },
         _id: req.params.id
       })
-        .then(() => { res.status(201).json({ message: 'Like ajouté ' }); })
+        .then(() => { res.status(201).json({ message: 'Like confirmé ' }); })
         .catch((error) => { res.status(400).json({ error: error }); });
       break;
    
@@ -105,7 +105,7 @@ exports.likeSauce = (req, res, next) => {
         $addToSet: { usersDisliked: req.body.userId },
         _id: req.params.id
       })
-        .then(() => { res.status(201).json({ message: 'Disgit like ajouté' }); })
+        .then(() => { res.status(201).json({ message: 'Dislike confirmé' }); })
         .catch((error) => { res.status(400).json({ error: error }); });
       break;
   }

@@ -1,4 +1,4 @@
-# pekocko
+# Pekocko
 accéder à l'application
 
 lien frontend
