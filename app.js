@@ -6,12 +6,6 @@ const rateLimit = require('express-rate-limit');
 const xss = require("xss"); 
 const html = xss('<script>alert("xss");</script>');
 
-// masquer les mots de passes et identifiants
- require("dotenv").config();
-
-const NAME = process.env.NAME;
-const PASS = process.env.PASS;
-
 
 const app = express();
 
@@ -27,7 +21,7 @@ const apiLimiter = rateLimit ( {
 //console.log(html);
 
 //connexion de l'api à la base de données en ligne mongoDB Atlas => mot de passe et nom de l'utilisateur
-mongoose.connect(`mongodb://localhost/my_database`
+mongoose.connect(`mongodb+srv://Gaspard-Savoury:ukq7LBi4CZREbxza@cluster0.9jrzo.mongodb.net/piquante?retryWrites=true&w=majority`
 ,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
